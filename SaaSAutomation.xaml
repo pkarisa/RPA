@@ -1,0 +1,323 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SaaSAutomation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ContactName" Type="InArgument(x:String)" />
+    <x:Property Name="Email" Type="InArgument(x:String)" />
+    <x:Property Name="Subject" Type="InArgument(x:String)" />
+    <x:Property Name="Successful" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>540.6666666666666,556</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SaaSAutomation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SaaSAutomation" sap:VirtualizedContainerService.HintSize="880.6666666666666,3418.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="SaaSBrowser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="818.6666666666666,3308" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="780,3068.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Pendo &amp; co" sap:VirtualizedContainerService.HintSize="718,2958" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[SaaSBrowser]" ScopeGuid="43e98e39-968a-413b-935a-d0e3047fdf82" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684,2698.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="622,25.333333333333332" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="622,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/list/all-cases" CvElementArea="1432, 182, 88, 55" CvTextArea="1449, 198, 21, 21" CvTextArgument="+" CvType="InputBox" DesignTimeRectangle="1437, 200, 48, 20" DesignTimeScaleFactor="1.5" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;desk&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;i' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='I' class='zd_font_icons zd13bca50f0a zd66b0c87383 zd-allmoduleformshortcut-plusIcon' aaname='' /&gt;" Guid="05c19d7f-3904-4eda-8ee9-a7b181e78fa1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAYCAYAAAC1Ft6mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACwSURBVFhH7dcxCsIwFMZxZ48idOs5BG/gHVy8hLcQ546OHkFwKXRzKaWgW59iw2ejHd9QnyG08AV+ZHgQ8ocsmSXpEt58U09aunt+dgaNFYPsGpxfgFwbZRZOxCBBjm5VoszCYZAdg0wYZDfBoMVecCpb5CoH8UEPp8x6hWClnPuLoEHri/NX/mM5ZAf97KH45OwYZMIgOwaZMMjuhm33IcqOd2UWTsSgOBg0dt+gGm/sWfeywsnZmwAAAABJRU5ErkJggg==" InformativeScreenshot="aff6afbf13d4e1d808f53161f187ee89.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'Contact Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="622,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Text="[ContactName]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/new" DesignTimeRectangle="116, 550, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT ZD_31'" FullSelectorArgument="&lt;webctrl id='ZD_31' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_31' tag='INPUT' type='text' class='zd_input_tag zd-textbox-container zd-textbox-basic zd-textbox-varClass zd-textbox-xmedium zd-textbox-primary zd266b1e491d zd-textbox-effect zd-textbox-borderColor_default' aaname='Contact Name' /&gt;" Guid="30090653-088c-42bb-b8e8-3d1f1828b738" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYoAAAAuCAYAAAA2hF5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADGSURBVHhe7dixCcAwEARB99+fQscu4xVJkdkKZuBqWLhnACAIBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABINxTr/czMzO4OoTAzs98dricAwswGsZj0icf+dfIAAAAASUVORK5CYII=" InformativeScreenshot="17de05174a3941d04c7a48c4f2f740a9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CvTextArgument="Contact Name *" CvType="Text" DesignTimeRectangle="116, 516, 154, 27" ElementType="Text" FriendlyName="'Contact Name'" FullSelectorArgument="&lt;webctrl id='890225000000000391' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='890225000000000391' tag='LABEL' type='' class='zd-label-label zd-label-varClass zd-label-title zd-label-medium zd-labelcolors-mandatory zd-label-font_default zd-label-pointer zd-fields-fieldLabel zd-fields-labelMandatory' aaname='Contact Name' check:innerText='Contact Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ4AAAAfCAYAAAAWaXQGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAfuSURBVHhe7VrNS1tLFH//lCsXAUEoCHWVVaSgUHiC8ERQuggIlQfFLhQX4qJYELtoEEoDhSxKH4gFIQUhhZJC8SY3ucbozYvGD3J9CeedMx83c7+SaI1RuT8YqDMnd2bO/OZ8Tf+AECH6gJB4IfqCkHgh+oKQeCH6gpB4IfqCkHgh+oJg4jVqcLq9CfrUGOxHBmB/ANvIGOTmN+FYt4RQiGCYcPiX0FtkAY5qotsDKTcNZVN0PQJUVmjfq1ARf7vhS7ymuQOF2CBXWnQS9KVVKK6tQmF+gvcNDIK2lIYLIX/XuNR2wHiZgKr4+84gL+NWVnS0g0I8bNpaBv4TI048IuI1LLhq8H86iId9DdEv4SXeRQaKUVLEEOQ2MnDp+kGzloXSDCclKfNK9N8dcH10mG1uU8+wt8yJhPvuDEko1BXzGFEwfokhBx4P8Zo/1kEj3qBXLL6gPc1BcSMOueEByG0ZQorDRTwLjl8RqdCioXLroteDhgalcfrwKBS/37XbfWjEm4bim2n+u5kUnIvRFh4R8WoaVFIJh2fcfx6HwlYKKloNmkKO4CSenoAcO9RFOO7gRxm7x+Ng7HmDl7NdnHx2DDRk+n7kCWjP5qCQynqsJyn96G+Ue7YIR6h1k27HiHDxwxOgo8VVl3GWFAfoavlPyomhO6ymliH/LCrGh0CbwnV+Mx0bt8HkV5VYVsh/NRRrLsnhbu3IohCqLC/qIOj/uPUVTLyzXTXGRr3ESI+a1yB830QdYvz9LoOhAO49OoTy+BuMyfNv0nBOeqd9JhchJ8eGozjm1K+K+q8UFOcn+RnKuZPZrsKrs094ThGcB9cd5BUdxDvdEkx9nb6ZC20YcPSSDpwzvZjcAZNuwJTYbGwdKg4DKZU+CloUf0MknV2E4qs5sWFsL7/ApZC+3EtgrInkpP4IEhPjToo9DyX5cf7yC5qLz2+k0nCcXGamnvocBCWg/CELG7DNLEIJ5Y+Ea6C5NZz7jAnWoLKFc8mb/HyBzVtcS0Cly6Th6vsquiH8+ylaal8dqMSzoLKGhCP5KB046XET8iLu9hymtMQRGucXp6Dq8EUCyit0Lj5jin4lzr8u8rWOTDNrZW5/hGJcrAetNteJP5oHHyFPFwU5dEIE9NM7QiEeuVm+GD/BblB9y0nn56ZPPwhr5dioVDq22DIcq9PasaY7Ngp2tfXtBfYtbSXttK7VL6CTMiLLYCqHHrjeC7RQIo516OKGrpYTSoYxuL4NjUlw+BBPQwtG88x8hFN1H40sGEwnk3B4IPoIcl1IrPwno2XZ7ZCo3dgoGD9FH6Gc4sSJrYLpulQn7+ji+VntFuq/EpBHwpbL+Ae72GOgJ71WWiGeVMAgFPdE13VgpaFAC466b7SEITaqKq01p/7V+yPpWnNJlZHtY7wLLQunHn9Qg6M4zTOEMansEmQcdpJRoqnhzZ1dhvJPJTb5LeIh5KE6rJuPHOLqIAtVddsC1bejbA35lDIo1zWegFPRJXH5Od5xTA38+ff9zwOsHdDpW3GvlbwufIg3cDPioSthG1zJ+MdSiNqHSSbTUpq/0m34HvTNkguW3tOlksTrYr0e/C7xECfvhbu2LX8HHbggL2PXlvhaY3Itc3CIycBl1d2yUPoTx28hsbs1V+urEDcCN3qLxFOSBTuOsVuLeF2t1412h+hBwN4sGULIikCAXMOCmkzSZMKltN4QT+i2Y+vukrSDI7k4eS8CSAwM/YudTliKS7sXxFNqkJSkULJg7vJWYnWle0A8RB2Dd/ad6CZU/eTUpEcmaWIf5SV+Rj0lXiQOJTGff8tAzTec6h4O4sFPKgCSEuJtnng4mpoovSBJWeAoXVebQ+GuFrOcHrlaGZ/kPxhULHfA42rlt98Er/fKrdx2h+hBu72ZULaTl4xHTsZeniQJ0VtXi4QnVzrQ7onvduAkHgvCReaFsU9gSUXeyMiYcBcIGaw/XQ94yhLJRQSTC1103Srx2n1LhhEK8Wi99J2g9bKaJma8r3daRd9bI55ycSNR0J465TyXRIH0Sr0hXuvyFr75mTQTzKSoC/4mXMRT6jCk9CVUumuSZi0DxnPuBtxlCF6e8KkzIexyirSQDDckHluf2yrLzNVVHkDU8TvckquHaeEB8wwx9zbrXK/t6oacpQNp1bvK6jrsjeZf4/rirSUnM1f9s9PstM6md8SzM2+f6oR9hrj/bgrJ7eAhHqGh4wZlYB55AvlX4j8JzApFUd9G1lObaR0YytCrBsVYagF5ahP+daz4JsSzwHwt5ojFobAUh/w7/mh/tStjpwUobVMssgOHK9y9y+q/w4pQTCj/M8QUjwmp4JxnwfwQ5NANO/YoS0Z06eLLUJifhtIPMeZBJ+IhLna4l6D5VTn7BWkCiiJOpcK2RrKsSNxD4iHsAjJ7PXIVkEfiUFZriDeEL/EYPE9JNOkYkjAB5oEVXIJw/24YXckUBsgBT2bXJx7iAtN6+YpArx0bctyCk+QCPyAaY2ueYE89R0v0t4/7aqD72FpsPbHReikx2TU9cSKh/iMB+ri4SKgPw8cdcnRBPAR7XmJrdcqdf1u3X1Dkuuj5q7LVyxivhUY5DQY9mbFLiC02CfpaCqq3FPsFE++Bw6K6E6ZeXdfo7imualQ/s3wvwUPGoyVeiPuNkHgh+oKQeCH6gpB4IfqCkHgh+oKQeCH6gpB4IfqCkHgh+gCA/wHE1g/guF7XRAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="622,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Text="[Email]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/new" DesignTimeRectangle="116, 678, 390, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT ZD_33'" FullSelectorArgument="&lt;webctrl id='ZD_33' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_33' tag='INPUT' type='text' class='zd_input_tag zd-textbox-container zd-textbox-basic zd-textbox-varClass zd-textbox-xmedium zd-textbox-primary zd266b1e491d zd-textbox-effect zd-textbox-borderColor_default' aaname='Email' /&gt;" Guid="0d093cba-42bd-41a4-ab15-eb930170260f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYoAAAAuCAYAAAA2hF5cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADGSURBVHhe7dixCcAwEARB99+fQscu4xVJkdkKZuBqWLhnACAIBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQBJKABIQgFAEgoAklAAkIQCgCQUACShACAJBQDphmK9n5mZ2d0hFGZm9rvD9QRAEgoAwswGV230ifNjTm4AAAAASUVORK5CYII=" InformativeScreenshot="1525c5f9ff2021306fb31ceb51858419.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CvTextArgument="Email" CvType="Text" DesignTimeRectangle="116, 643, 53, 27" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl id='890225000000000393' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='890225000000000393' tag='LABEL' type='' class='zd-label-label zd-label-varClass zd-label-title zd-label-medium zd-labelcolors-default zd-label-font_default zd-label-pointer zd-fields-fieldLabel' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAfCAYAAABd7WWuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJLSURBVFhH7Zaxa9tAFIf1Z2g1ZDFkaLZo9EEXQxaDF4OHoiloCqKT6RJEhiAyFE/BdCgog8EeAsomLwV1KGgpJIPBGTJoyKChg4YOv96dnh3ZsRLayK170Qdv0N3p7n3S3ZM0vAIqSVWoJFVBPck4hDeMkNKlYFnyzkNL06A9GTqcbzR+25jn3x0hpibBekm9CfvUhVsQ/pTG/0OSKws1/sDZWUQtnN+TdJC7dSuJhx3oPNfakY+E2pSTFKRJ/uRxNiMZwz9iYG9tvoUjDA6bqOv8fq0Go23Du6Ek4gDuO0Z9OuoHNkbTlQSJeNKH1c6NbZhwxtdLhaSQTUl67SwZnSel7zKY73uwDupyK2maAWc4QKegr/+dppGkCE9YtgX3udiFj2Dch9nQ+VgNxslyxcRXR7brvH3BZiX5Yg0H4Q9q5iRXNsk80XeYO083fTAxtuth9pPaJBHcfTFPC94tNQleLFkUj+Qf3mRvsrqheHJvnuvrIcgJpXcRru/pIkd0tifXN8eLR1LGmyz6hPiY0dCMuWQHo/yskj/te0x80ZJCnWFu8N/frmVJprzwDGDzIsV2s7OYDwUkZ/C6QkxUXwuuKDyTQMboA5NC/71kcmnJpI3j8KEYEcps1/BYXK//L56dK/Im5xXUulx5j7ee/M6WL6k1Ya2trhSf5x/m8iQxHaAp1uaV3RnTWfxogokfCT0rQiVLPhOLSUqU5CRfXLR2aA0ROwbM0wDhpzLP5JaQJgmS1Z/vF7CVkmVTSapCJakKlaQqvAJJ4Bd1LriAe15IHQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'Subject'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="622,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Text="[Subject]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/new" DesignTimeRectangle="116, 717, 975, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT ZD_35'" FullSelectorArgument="&lt;webctrl id='ZD_35' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZD_35' tag='INPUT' type='text' class='zd_input_tag zd-textbox-container zd-textbox-basic zd-textbox-varClass zd-textbox-xmedium zd-textbox-primary zd266b1e491d zd-textbox-effect zd-textbox-borderColor_default' aaname='Subject' /&gt;" Guid="66db9f9b-3d8c-4799-befd-184110c2c39a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA9MAAAAuCAYAAAAr6UofAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE9SURBVHhe7dqxDYAwEARB+u+PkNhlPJEJkTefka6Ile4aAAAAIBHTAAAAEIlpAAAAiMQ0AAAARGIaAAAAIjENAAAAkZgGAACASEwDAABAJKYBAAAgEtMAAAAQiWkAAACIxDQAAABEYhoAAAAiMQ0AAACRmAYAAIBITAMAAEAkpgEAACAS0wAAABCJaQAAAIjENAAAAERiGgAAACIxDQAAAJGYBgAAgEhMAwAAQCSmAQAAIBLTAAAAEIlpAAAAiMQ0AAAARGIaAAAAIjENAAAAkZgGAACASEwDAABAJKYBAAAgEtMAAAAQiWkAAACIxDQAAABEYhoAAAAiMQ0AAACRmAYAAIBITAMAAEAkpgEAACAS0wAAABB9MX0/y8zMzMzMzMx+tolpMzMzMzMzs8Ntbt4AAAAQiWkAAABIZl4lKBeHZ1BukAAAAABJRU5ErkJggg==" InformativeScreenshot="19c6c784838d4233902f52e1b99bcd6d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="116, 682, 88, 27" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="&lt;webctrl id='Subject' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Subject' tag='LABEL' type='' class='zd-label-label zd-label-varClass zd-label-title zd-label-medium zd-labelcolors-mandatory zd-label-font_default zd-label-cursor zd-fields-fieldLabel zd-fields-labelMandatory' aaname='Subject' check:innerText='Subject' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAfCAYAAABqI6qaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVrSURBVGhD7VhLSyNZFJ4/5cpFoEEQhHGVlSJ0r0YQWoQWFwGh3YgrEVqyaGwQNy1Ck0BDFuKAOBCIIDggEaQrr9JULDtaPjCZhG/Oqbo31isxllqtTT64aE7de+rer87z/oEeQkWP8JDRIzxk9AgPGT3CQ0aP8JDhS3jTyEJbmoYSfYMffX34MRBFbnYNui4mPAZaAjnWOZXClRD9PtBRft/5bB7Cm8cJ5CMWyfn5dVTSKZzMj1vE90VR+rcmZgZEEMIbWagj/bSnGCpP8dG7RUPHWXIRpb/veWmjhnqD/3ERTjJTbIOLcBUnb2lBZBwnR0IkcHuwYhEVmUPFEMIgCEJ4LYPiAL971LOv58RlctI0tPz3zoRfp6Zpb4PIL62gMEb7HFuAukRryXCLaaeBOglX1qEwGR+3cCNEdpx/fUcb6KcNqEISAEFDClnRzbX4PyR0S3hDy+I0uYbi1KCIBG+gfCDSkzuoamKSgJPwvUVrQXxfCFyo7kNL60436bhGuFjfJDS5Zzvh5LL6agw5mSuGRimMJfDzIcSyjo0F5EfEYUW+OT1uE/rk/LGoNZ8sU/mwiPKB3W33UeJn7hFZxpmY4UUNZ3HSOcBnYaP0/0j+Fv5XAl1HjaCEj00iH6W/Q5MobqSgbydQio2Kg9F8h2X46GFcKziZothOFpWbXUZ5O4MKkZnj8OOXb66JSH5na/4OysL1maTcahZ1c6KKSnyZLHaY5H3mBynR71J8Cxfmcy9uiQeFdWxkLeLb5Dsn4ZyczA3Rwi9Z3ApxRwQlnMdMAheurGIIN3Z+dD/ChUURefmk6vC6prGDApMYXUNVyEgzKjHr43BIbAopo6nvoGiee9hBUrchhXH1DxE+Qh7Ay68p54yMo7SrO97DcCVNoE5WblYpfGhZqewpuGrn5kEJp8RcLgiZAwa0GV4ThdpKkD56jC0UWM/bdZy7SwHC+Vf2lmGoh0JwtNbyXj8rvU0vWqWvzbMeQni38BDOaNZUKoeWUZgQcU4Odv9NRbidQFDC3ydwKURuyIPmknKRjx753k8Z3FQN79heMJ9Lsq6+u3Xej9AId4Cqg1tNwSklN0VYfm7DVqUEJdx3voBHp1ePJOPeIXScLfHvfgoZ5s+u8GsIt4GbIisc2LL1LyY892kLejrTfhxZmeBFEt6okiVTxVBtU1F1dO2HEt6hDpfuf3dQr57mrvVeZVWxBPegRV6qDXmtbvEOz0x4DafznMU7xDmuYv6kg0cWoMuPcrjSapY8VU2DyjAzDPkQbpc5QPv4yM+7TJptStj64Ra0I5vlyH3G/Ju6eppjPlUwGwr+E7Jnt/AmVSgWGVRD7nnN/OIbb6Afyuf9u8TJbbcgtezqqlolni/hNKaILJdVWfUsP0vZkqoP4a2y0NtkNI2MqLdHoR7Ic0gdwyhstpkfofmyqiFIT1OoRH4qeGK4sTlnHZiJjVnNhNm2TohucIbKMFeJWP0iqhnacD6ewGlqHUVuYiK0pp2FR99ZDcrAuNX42C/JBqahHYv5JvwIJ7QaHxpT1C06Gh9qbsgw7F7XPE4hbz67O1uFO13znmaQPpyzPkdBGiDpmqdGiNr1x16e+SbNhpaBOjsOZcgKMfxCZSIGdVvBjU/Na7bLn8kaZP3Og0rI0u6+lyhbDL90XwNH6YMtUQ7xxIg2hDMaBqqpxbtWnXoHvsc4cV9BCJhXz3EiWV4FDI2aXad2aHiaFIaxTbolD9G55yE8MLiE5BrYqPluPjg6EP7K8LSEPxdayfqRV8MvAC+e8PphimKnCBdUCYV8Q/vkePGEm6UZx9n5hCdZv0a8jpDyG6FHeMjoER4yeoSHjB7hoQL4H+H7/ERw/iAYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="622,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/new" CvTextArgument="Submit" CvType="Text" DesignTimeRectangle="56, 920, 135, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Submit' tag='BUTTON' type='button' class='zd_button_tag zd-button-bold zd266b1e491d zd-button-primaryfilled zd-button-medium zd-button-container zd-button-native zd-button-varClass zd4af66c9aeb' check:innerText='Submit' /&gt;" Guid="e8b53a7e-8da7-4951-bf85-12a90df5f493" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAuCAYAAAAYyOqiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQ1SURBVHhe7ZxNSxtBGMd79tTP4TeQfgKPHnvzK4hQPHoTTyYn8SB41EOpvQUvRkQIIkWQ0kigEUFUrHGNSTbm7ek8u/tMZpLRjYY0W/L/w09xdnYTnd/Om2E/EIIMGMiCDBynLGv7Nfq09kAfv9zR1CKYFLi9ud25/V2xZPn9pxVUdl0ITBbsAftgxpIFogAT9sGMloW7HtcJYLIxhyQtC3oV4MLsXbQsmMwCF+yFRMviqggAI4EsIBYJZAGxSCALiEUCWUAsEsgCYpFAFhCLZCJl2boNf2evUHEeBzaShMpSovmDZ8pXOtG7U2l26OayTgspV/23MU5Zln61g9f2r32aNcpntqu0e92h0yO7fhKQJFCWEi0VbEn8uvlzi7Y2XecNzvhk8WhH/vblZ5rX5RXKRv+CyR+b9ZOBJHmybNSpGLyjDuVPyjQt5akqZbxImlv7rnwrYx2GUk+0mvN7ekjI8j5y0Wcoag1a6j22WVdDU4syh080I2XfG+QFJ6gex6z7yjFTlt7hzufrHxiSBviUD452KLtfo+y9XX/na0nVeaR0oUVeOMoQtTtULNRozrqOg2P7MyM66oZw1h8DkuTKohp4d5DhZghZqKaGuOB7m/LXLSpWglIVNT86M3sdkUXJ0VRflAg8NPpajBbl7yKBeNjkOlG8c7v30kOsyJBRsqrXFsl8T11L/Zw/q1rnjRNJ8mRZ6TYM1VqUzVXp8zrfuY66zDCyqHiFareXsuZLqsfYkHLjPVUatCxDyKYq12KoYfP4sf867Sal9fUdsgRgGHo3c4fNqJGNqLvZu2/S7l7PEDGMLPUmLRvlIVXK1cPDxVMvKuvKcnpoi7t6ETW+NWFVbDzruVf2W7ccsowCngieNOhUzQ/Mbp3Dy049FxhCFv/C3dVrAa7k04Mii2r473Zdd+Mz7nMgyz9ger1CW5cySehQbi86NoQsL62G+hsUsnCSKUvKo9kVR7laceyGra8mjk9hGXqWkSNJmCwPlI4ayn3Xl/Sm1s3PclhmCLHTK9iBjF9uWZzL88UnypTDw/1zFsgSxFVpHMz+kKWzGmr2ZXURMpMRMdqU2ZZyaRRuXKP+imoAvRR+QRYVlrI7YS7R/EkrXE6zfH2rodHL0hU0OUgSOAw90tZ19AflVMJ9h6KxcXZzbjewHjZUZJ8i2LdoSvkLsshxvc8i9c1lMDNqWe4ofRmV82aeei83F73XGx+ShE5wH2gh17D/kchLZ08tnTN2bxPSv3vq3T7Tsu6J3LJwr7JwZL9O7A7uiGSZ2rR3hukKsoD/EAlkAbFIIAuIRQJZQCwSyAJikUAWEIsEsoBYJJAFxCLRsuCRG8CF85EbeJgPcOF8mA8eEwZcOB8TxkHvAkzMXoVjyYJHmwKBPXj10aYS7nq4Mia9kwW3N7e7OfSYccqCIK5AFmTAEP0FsnofPRBWb0wAAAAASUVORK5CYII=" InformativeScreenshot="4e6271991eb0bfb868f436d2733db5c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:UiElementExists DisplayName="Element Exists 'BUTTON'" Exists="[Successful]" sap:VirtualizedContainerService.HintSize="622,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f76213ee-8494-4323-b23d-9cdd537d47aa" InformativeScreenshot="c8e800626cde9f588a8faff8649f47c3" Selector="&lt;webctrl aaname='Close Ticket' tag='BUTTON' type='button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[Successful]" sap:VirtualizedContainerService.HintSize="622,1183.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,234.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Ticket Created Successful on ZohoDesk&quot;]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="588,764.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="546,677.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Ticket Not Created On Zohodesk&quot;]" />
+                          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[SaaSBrowser]" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="484,379.3333333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+                            <ui:BrowserScope.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tickets'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43e98e39-968a-413b-935a-d0e3047fdf82" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/details/890225000000250001" CvElementArea="103, 183, 107, 55" CvTextArea="118, 198, 81, 22" CvTextArgument="Tickets" CvType="Button" DesignTimeRectangle="122, 197, 76, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Tickets'" FullSelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' type='' class='zd-tab-tabText zd4af66c9aeb zd050393fdda zdeb439ba1e6 zd577c9fa95f' check:innerText='Tickets' /&gt;" Guid="a15a7a53-7a57-4242-9c5e-dc10480a2d08" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPnSURBVGhD7ZhPaxpBGMb7hXrrh/AU8OCxhyJCsZd4yqGhIYeQgEsgaQ+SQBoSQqRBhMBCiAdRiEQsqDl0CbgIKqIICmJAIfB0ZnfWndndqMm6IaU78Fzmfeffb2fmfWffvf+wAl8vlw/QpXyALuUDdCkfoEv5AF3KB+hSJsDLJhYvE1QOxY6Wot0qhrT7BwUHTvY3KBNgogC11hTUe9BoAYOOxaZC3tXbbWT7uk8jh7DR10v1TwN0UKquocH47pejnUq6HelOgyqkoLPPwnoVgBFsXVShDkdLOUWuAVKFYtsIu4VH9SoAj1DUBlnONbQUgEvTfwnQCD7tguMdGIpfo1gfYfyou9EyHjSRP5MQsPo/CXCTzGWit20UsPWRt9ExclC67Cqh5XGCYVvB+U5E8JNKnA9fLOMFvqZRbHNznoygygmEOB9DngKMEttYt2Lc1QNQa6CDoGV8LyPKt3EESODVnoIXgZTvzxiD7jIT4lpaIfYOhgzMsMGC4p8cJKPPWA4tw96mdtOfrlGYL5F3AA0YIJe1ZbeFEr/RY2vsZTftbaYACSC2a8bdKo5jZh9UgT3mP+kgn+D6IYqeKMym4pirn3eED+70ibWyCXPOQQkyOwGtq23B3yOA65AbevWwdGQ/qkSBpKod5aJ8an5VAaAJDwPFBo8fo5X5brFRRXB+r9vVS75+NsBUTWsCJWmxBdcR/SxeCVQeAbyGqlX2kd/kfOdpClBFSmbH3xEeFTfGroS1b3ZtZDuahzj/2QDDV3obPPahpE8Rc4DGyxuAjnfZApoee6OMUIw/sQCb74wifNx5UXgV+zcdIehpQaleRSq+avN/mwAfmqiwO4f2a724rb55OQd5li6OngGQiRzZ2A8ZmRL3IiNFTYsf1OMj3EHmC+craBXRmOWL8uCDZKEDrRNtfPs9aozRRMpmm6UFAQoiu7LM7uOu+EE9DyK9G6cLngSRMxJEqEM7h5hRb925MQKJbcRh2QqRCyKy8zGPJgvI/Pxuyd9mACS7TqKpTikt1lNxc9vn6j0CyAGiacyJuNNC8QJaGpgJSQs4wFaARIEdw5dGWzFVCRwqbAwSSCxJ8zSNIWMoSb5dYrqz7eBPUdGOK2kjzDmCNRaQUL8W1ukZQC2Hu2V/amgZ9vWktctokNIrpxdIpAkoI9/Tdg2/aDGRnv41mjUG0X7ZsE/Qq9PEm1wDn3SbORYprL8WA44J+VB7r3IHGoogvOfwzOqqyBw+5ynHv2roXxRxEfQpV+GfXmyM/AmXDPMKJiDX+KdaEzJ3Vwd29DkL/b0kCvuaLx+gS/kAXcoH6FI+QJfyAbrSCv4COj16jh5ZX2EAAAAASUVORK5CYII=" InformativeScreenshot="5817b3a0c30ec895e90ceb389911ed52.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(1) #102 - Pendo &amp;amp; co' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:BrowserScope.Body>
+                          </ui:BrowserScope>
+                        </Sequence>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKHSURBVDhPhZPtS5NRGMYlC6GIgqh/oL70tRd6xTKyPhSB9CXog5EV5tRlpYsSEgTBysKyDKtVEKlMp9uojEjH3ObLJEW3ls5cb3PTLefUvbjHPVf3OTvSB3u54Dee5z7XdXN27vOk/EsANkuJhZ5ANCRPRIJgzMbpB7hDrBG2v4tMpTq3BXtblNjXWoT0lgvIaruOvskRidYUwvZnkWEZ0VDYWYMzHbfQ7fsIs3cIp9pvIM9UTUtoIVYI+1LR4qp4Quo83laGQ4YS6N1WFkKZ7TkUprvssZFIFfakqLCS2EJkEkeI3jdfe3H01TUc0F3GXDyK7PeVqBrQ0BIqRCwpKqxPyPJT94w32O1zxmjLsZ4J50K/fxQlXXU4+a4Cofkw3412rJM1yBHRpKhQZPQMyLu1BWCwg9ujLeRs05zHs09v8W12AjuaFbBNDkfInyGiPJxKaPLpvynNNXDP+NDvd8EXmeL4o9MY+unmB5ipL6FxTn0n/yYR5w3WhqWY7djrUtS72mEn80F9MZo+mxCMzaLWrsf2pjycM97GyDTL4h6xXMR5g42eucAPtm2L1w46C77lrZpc7GouQIbuElrHLDCND9IdGGYNropoUlRI/+B3hXc259P2vczAZfU58NBhwHg4wN9z6D5U9jewx5simhQVsnVuq8y2PRMPM8MShaUoDhtUaBw1stdcEU2KCuXVg1qwS9Po6oCKxsZGt4iq6xHOGqv4OTimvsyRf7+I8jCbwEul+T7WqbP42IosD3CFQouwBqU9anTQmOl86sm/WsR5gzRZlg3lfS9w0VKL0ZCHfW3snj8mngjURB2hIDaI6G9R8XREigXnE5KTnk8QaWLpP0pJ+QXgDlI/XSFonAAAAABJRU5ErkJggg==" InformativeScreenshot="ecb8b65c1b41f001d9caefdf5514a8d7.jpg" Selector="&lt;html app='chrome.exe' title='Pendo &amp;amp; co' /&gt;" Title="Pendo &amp; co" Url="https://desk.zoho.com/agent/pendoco/pendo-co/tickets/list/all-cases" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="784.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="546,622.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Ticket Not Created On Zohodesk&quot;]" />
+              <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[SaaSBrowser]" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="484,327.3333333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_3">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6f278d4-16ea-4d78-b94c-2102a279f986" InformativeScreenshot="3ec4b6e5fec9e24f9d859ad04a6fcc43" Selector="&lt;html app='chrome.exe' title='(1) #102 - Pendo &amp;amp; co' /&gt;&lt;webctrl aaname='Tickets' parentid='react' tag='DIV' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+              </ui:BrowserScope>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
