@@ -9,7 +9,7 @@ This project is about automating workflows by use of bots to automate once trigg
 
 ## Live URL
 
-The link to the project's repo is
+The link to the project's repo is  https://github.com/pkarisa/RPA
 
  
 
