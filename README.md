@@ -17,11 +17,12 @@ The link to the project's repo is
 
 UiPath Studio
 
- Zoho Desk Application
+Zoho Desk Application
 
- MS Excel
+MS Excel
 
  
 
-## Licence/Copyright
+## Licence
+Copyright (c) 2023
 
