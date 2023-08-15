@@ -26,5 +26,5 @@ You can reach me via email fkarisa@gmail.com
  
 
 ## Licence
-Copyright (c) 2023
+For licence/copyright information check on the Licence file.
 
