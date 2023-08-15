@@ -98,11 +98,7 @@
           <Sequence DisplayName="Event Handler" sap:VirtualizedContainerService.HintSize="548,2384.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
-              <Variable x:TypeArguments="x:Boolean" Name="boolTicketCreated">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="boolTicketCreated" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -117,6 +113,8 @@
                     <Variable x:TypeArguments="x:String" Name="strContact" />
                     <Variable x:TypeArguments="x:String" Name="strEmail" />
                     <Variable x:TypeArguments="x:String" Name="strSubject" />
+                    <Variable x:TypeArguments="x:String" Name="strPhoneNumber" />
+                    <Variable x:TypeArguments="x:String" Name="strDescription" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,6 +136,12 @@
                       <OutArgument x:TypeArguments="x:String" x:Key="Subject">
                         <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSubject" />
                       </OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="PhoneNumber">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPhoneNumber" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Description">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strDescription" />
+                      </OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="410,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The client &quot; + strContact + &quot; reachable on the email address &quot; + strEmail + &quot; needs help with &quot; + strSubject]" />
@@ -155,6 +159,12 @@
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="Successful">
                         <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="boolTicketCreated" />
                       </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PhoneNumber">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPhoneNumber" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Description">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strDescription" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <If Condition="[boolTicketCreated]" sap:VirtualizedContainerService.HintSize="410,1106" sap2010:WorkflowViewState.IdRef="If_2">
