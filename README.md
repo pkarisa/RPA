@@ -21,6 +21,8 @@ Zoho Desk Application
 
 MS Excel
 
+## Contact Information
+You can reach me via email fkarisa@gmail.com
  
 
 ## Licence
